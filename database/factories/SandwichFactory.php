@@ -17,7 +17,10 @@ class SandwichFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "name" => fake()->city(),
+            "type" => fake()->randomKey(["normal"=>1, "vegan"=>2, "glutenfree"=>3]),
+            "price" => fake()->numberBetween(400, 1000),
+            "date" => fake()->date(),
         ];
     }
 }
