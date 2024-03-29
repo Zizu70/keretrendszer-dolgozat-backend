@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('sandwiches', function (Blueprint $table) {
             $table->id();
+            $table->string("name",50)->unique();
+            $table->enum("type", array("normal","vegan","glutenfree"));
+            $table->integer("price");
+            $table->date("best_before_date");
             $table->timestamps();
         });
     }
