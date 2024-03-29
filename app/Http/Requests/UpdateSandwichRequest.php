@@ -22,7 +22,10 @@ class UpdateSandwichRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string|max:100',
+            'type' => 'required|in:normal,vegan,glutenfree',
+            'price' => 'required|numeric|integer|min:400 max:1000',
+            'date_column' => 'required|date|date_format:Y-m-d|after_or_equal:2024-04-01|before_or_equal:2024-12-31'
         ];
     }
 }

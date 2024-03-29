@@ -20,7 +20,7 @@ class SandwichFactory extends Factory
             "name" => fake()->city(),
             "type" => fake()->randomKey(["normal"=>1, "vegan"=>2, "glutenfree"=>3]),
             "price" => fake()->numberBetween(400, 1000),
-            "best_before_date" => fake()->date(),
+            "best_before_date" => fake()->dateTimeBetween('2024-04-01','2024-12-31')->format('Y-m-d'),
         ];
     }
 }
