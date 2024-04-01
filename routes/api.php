@@ -10,5 +10,5 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 
-Route::apiResource("/sandwich", SandwichController::class);
+Route::apiResource("/sandwiches", SandwichController::class);
 
